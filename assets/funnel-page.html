@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{OFFER_NAME}}</title>
+<meta name="description" content="{{SUBHEAD}}">
+<meta name="robots" content="noindex,follow">
+<!--
+  leadgen-funnel template (fear-hook, single file, no build step).
+  Built by skills/leadgen-funnel. Self-host images/fonts before launch —
+  never hotlink third-party CDNs on client pages.
+-->
+<style>
+  :root{
+    --ink:#111418; --muted:#5a6472; --line:#e4e8ee; --bg:#ffffff;
+    --accent:#b8860b; --accent-2:#8a6508; --warn:#8c1c1c; --panel:#f7f8fa;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  header.bar{border-bottom:1px solid var(--line);padding:14px 0}
+  header.bar .wrap{display:flex;align-items:center;justify-content:space-between}
+  .brand{font-weight:700;letter-spacing:.02em;text-decoration:none;color:var(--ink)}
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  section{padding:34px 0}
+  h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:10px 0 14px;letter-spacing:-.02em}
+  h2{font-size:clamp(18px,2.6vw,24px);margin:0 0 12px}
+  .sub{font-size:clamp(17px,2.2vw,21px);color:var(--muted);margin:0 0 22px}
+  .line{margin:0 0 10px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+  ul.proof{margin:0;padding-left:20px}
+  ul.proof li{margin:0 0 8px}
+  form{display:grid;gap:12px;margin-top:6px}
+  input[type=text],input[type=email],input[type=tel]{
+    width:100%;padding:14px 15px;border:1px solid var(--line);border-radius:9px;font-size:16px;background:#fff}
+  input:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+  button{width:100%;padding:16px;border:0;border-radius:9px;cursor:pointer;
+    background:var(--accent);color:#fff;font-size:17px;font-weight:700;letter-spacing:.03em}
+  button:hover{background:var(--accent-2)}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);line-height:1.45}
+  .consent input{margin-top:3px;flex:0 0 auto}
+  .cta-repeat{text-align:center;padding:26px 0}
+  .cta-repeat a{display:inline-block;padding:15px 26px;border-radius:9px;background:var(--accent);
+    color:#fff;text-decoration:none;font-weight:700}
+  .note{font-size:13px;color:var(--muted)}
+  footer{border-top:1px solid var(--line);padding:24px 0 40px;font-size:12.5px;color:var(--muted)}
+  footer a{color:var(--muted)}
+  .disclaimer{margin-top:12px;line-height:1.5}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="{{BRAND_URL}}">{{BRAND}}</a>
+    <span class="kicker">Free Guide</span>
+  </div>
+</header>
+
+<!-- 1. HOOK + 2. AGITATE -->
+<section>
+  <div class="wrap">
+    <h1>{{HOOK}}</h1>
+    <p class="sub">{{SUBHEAD}}</p>
+    <div class="panel">
+      {{AGITATE}}
+      <p class="note" id="mech"><strong>{{MECHANISM}}</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- 3/4. PROOF (only real, verifiable items belong here) -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>What you get</h2>
+    <ul class="proof">{{PROOF}}</ul>
+  </div>
+</section>
+
+<!-- 5/6/7. MAGNET + FORM + CTA -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="panel">
+      <h2>Free: {{MAGNET_NAME}}</h2>
+      <p>{{MAGNET_DESC}}</p>
+      <form action="{{FORM_ACTION}}" method="POST">
+        <input type="text"  name="first_name" placeholder="First name" required>
+        <input type="email" name="email" placeholder="Email address" required>
+        {{PHONE_FIELD}}
+        <button type="submit">{{CTA}}</button>
+        <label class="consent">
+          <input type="checkbox" name="consent_given" value="yes">
+          <span>I agree to be contacted about this guide. I understand I can withdraw
+          consent at any time. See the <a href="{{PRIVACY_URL}}">Privacy Policy</a>.</span>
+        </label>
+        <p class="note">No cost, no obligation. We never sell your information.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="cta-repeat">
+  <a href="#mech" onclick="document.querySelector('input[name=email]').focus();return false;">{{CTA}}</a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>{{BRAND}} &middot;
+      <a href="{{PRIVACY_URL}}">Privacy Policy</a> &middot;
+      <a href="{{TERMS_URL}}">Terms</a>
+    </p>
+    <p class="disclaimer">
+      This page is informational and is not financial, legal, or tax advice. Any decision
+      you make is your own; consult a licensed professional. Results described are not
+      typical or guaranteed. &copy; <span id="yr"></span> {{BRAND}}.
+    </p>
+  </div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+{{TRACKING}}
+</body>
+</html>
