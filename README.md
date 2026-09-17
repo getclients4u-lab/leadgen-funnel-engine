@@ -7,6 +7,21 @@ lead-routing offers.
 This repo is both a **working tool** (build a funnel from a JSON config) and a
 **reference** (audit any funnel URL and see exactly what it tracks).
 
+## Live demo
+
+**https://leadgen-funnel-demo-h1qptcd70-getclients4u-5509s-projects.vercel.app/**
+
+Open it with tracking params to see attribution working:
+
+```
+https://leadgen-funnel-demo-h1qptcd70-getclients4u-5509s-projects.vercel.app/?sub1=93&sub2=9f3ce1a916524e238e30e4514b317955&msid=56091_93&utm_source=test
+```
+
+Inspect the form — `sub1`, `sub2`, `msid` and `utm_source` are populated as hidden
+fields from the URL. Submit without ticking consent and it blocks you.
+
+> The demo posts to `example.com/api/lead` on purpose: no lead is collected.
+
 ## What's inside
 
 ```
