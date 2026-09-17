@@ -1,0 +1,26 @@
+{
+  "offer_name": "Retirement Shield Guide",
+  "hook": "Inflation Is Quietly Taxing Your Retirement Savings",
+  "subhead": "See how savers are repositioning before the next rate cycle",
+  "agitate": [
+    "Every year the dollar buys less. Your savings do not adjust.",
+    "Most retirement accounts are concentrated in assets that lose purchasing power over long horizons.",
+    "The cost of waiting is measured in decades of compounding you cannot get back."
+  ],
+  "mechanism": "Diversification into real assets has historically been how savers preserve purchasing power across rate cycles.",
+  "proof": [
+    "Plain-English breakdown of how inflation erodes long-horizon savings",
+    "A checklist to compare providers and total fees side by side",
+    "The exact questions to ask before committing any capital"
+  ],
+  "magnet_name": "Retirement Shield Guide",
+  "magnet_desc": "A free 12-page guide on how inflation affects long-horizon savings, plus the questions to ask any provider before you commit. Delivered instantly to your inbox.",
+  "cta": "SEND MY GUIDE",
+  "privacy_url": "https://example.com/privacy",
+  "terms_url": "https://example.com/terms",
+  "form_action": "https://example.com/api/lead",
+  "brand": "Example Financial",
+  "brand_url": "https://example.com",
+  "ga4_id": "G-DEMO12345",
+  "require_phone": false
+}
