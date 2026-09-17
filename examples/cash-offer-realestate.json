@@ -1,0 +1,25 @@
+{
+  "offer_name": "Cash Offer Home Sale",
+  "hook": "Your House Is Worth Less Than Your Agent Told You",
+  "subhead": "Get a written cash offer in 24 hours with no repairs, no showings, no commission",
+  "agitate": [
+    "Agent estimates are aspirational. The number that matters is what a buyer will actually wire.",
+    "Repairs, staging, and 6% commission come out of your side of the table.",
+    "Every month you hold costs you in taxes, insurance, and maintenance."
+  ],
+  "mechanism": "We buy directly, so there is no listing, no agent commission, and no financing contingency to fall through.",
+  "proof": [
+    "Written offer within 24 hours of your walkthrough",
+    "You choose the closing date — 10 days or 10 months",
+    "No repairs, no cleaning, we handle the paperwork fees"
+  ],
+  "magnet_name": "Sell Without Repairs",
+  "magnet_desc": "A short guide covering exactly how a direct cash sale works, the true cost comparison against listing, and what to check before you sign anything.",
+  "cta": "GET MY CASH OFFER",
+  "privacy_url": "https://example.com/privacy",
+  "terms_url": "https://example.com/terms",
+  "form_action": "https://example.com/api/lead",
+  "brand": "Example Home Buyers",
+  "brand_url": "https://example.com",
+  "require_phone": true
+}
